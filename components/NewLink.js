@@ -1,6 +1,5 @@
 const axios = require('axios');
 import { useState } from 'react';
-const { checkUrl } = require('check-url');
 import { Toaster,toast } from 'react-hot-toast'
 import { useCopyToClipboard } from 'react-use';
 import { useEffect } from 'react'
