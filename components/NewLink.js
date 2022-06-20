@@ -37,6 +37,7 @@ const NewLink = () => {
                       'key':response.data.key
                   }))
                   }
+                  toast.success('Linkiniz panoya kopyalandı')
                 })
                 .catch(function (error) {
                   console.log(error);
