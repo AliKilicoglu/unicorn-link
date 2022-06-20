@@ -1,6 +1,5 @@
 import { useState,useEffect } from "react"
 import Link from "../components/Link"
-import Navbar from "../components/Navbar"
 const Links = () => {
   const [keys,setKeys] = useState([])
   useEffect(() => {
@@ -12,10 +11,10 @@ const Links = () => {
   setKeys(parsedCookieKeys)
 }, [])
   return (
-    keys.map(key => {
-      return (<div>
-        <Link url={key.url} urlKey={key.key}/>
-      </div>)
+    keys.map(urlKey => {
+      return (
+        <Link url={urlKey.url} urlKey={urlKey.key}/>
+      )
     })
     )
 }
