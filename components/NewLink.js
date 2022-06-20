@@ -1,6 +1,6 @@
 const axios = require('axios')
 import { useState } from 'react'
-import { Toaster,toast } from 'react-hot-toast'
+import { toast } from 'react-hot-toast'
 import { useCopyToClipboard } from 'react-use'
 import Cookies from 'js-cookie'
 const NewLink = () => {
@@ -8,7 +8,6 @@ const NewLink = () => {
   const [state, copyToClipboard] = useCopyToClipboard()
   return (
     <>
-        <Toaster/>
         <div className="flex flex-col  justify-center text-center  mt-20">
             <h1 className="text-white text-2xl mr-auto ml-auto whitespace-nowrap mb-3 font-medium " >Kısaltacağın linki gir</h1>
             <input  value={longUrl} onChange={e => setLongUrl(e.target.value)} className="ml-24 mr-24 drop-shadow-[20px_20px_20px_rgba(0,0,0,0.3)] w-25 mb-3 text-xl font-medium h-12 rounded-md outline-none text-center" type="text" placeholder="https://..." />

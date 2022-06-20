@@ -16,15 +16,13 @@ const Links = () => {
   setKeys(parsedCookieKeys)
 }
 }, [])
+return(
   keys.map(urlKey => {
     return (
       <Link key={urlKey.id} url={urlKey.url} urlKey={urlKey.key}/>
     )
   })
-  return (
-    <Toaster/>
-
-    )
+)
 }
 
 
