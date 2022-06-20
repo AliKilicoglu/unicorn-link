@@ -23,10 +23,20 @@ const NewLink = () => {
                 .then(function (response) {
                   console.log(response);
                   copyToClipboard('https://unicorn-link.herokuapp.com/'+response.data.key)
-                  const keys = Cookies.get('keys')
-                  keys.push(response.data.key)
-                  Cookies.set('keys',keys)
-                  toast.success("Link panoya kopyalandı")
+                  const keys = localStorage.getItem("keys")
+                  if (keys === null) {
+                    localStorage.setItem('keys',JSON.stringify({
+                      'url':response.data.url,
+                      'key':response.data.key
+                    }))
+                  }
+                  else {
+                    const keys = localStorage.getItem("keys")
+                    localStorage.setItem("keys",keys+'-!-'+JSON.stringify({
+                      'url':response.data.url,
+                      'key':response.data.key
+                  }))
+                  }
                 })
                 .catch(function (error) {
                   console.log(error);

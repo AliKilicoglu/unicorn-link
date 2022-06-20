@@ -30,7 +30,7 @@ const Navbar = () => {
                     <h1 className="text-white  text-2xl">Unicorn Link</h1>
                 </div> 
                 <div>
-                {!menuOpen ?<GiHamburgerMenu onClick={()=>{setMenuOpen(!menuOpen)}}className="text-white h-8 w-8"/>:<AiOutlineClose onClick={()=>{setmenuOpen(!menuOpen)}}className="text-white h-8 w-8"/>}
+                {!menuOpen ?<GiHamburgerMenu onClick={()=>{setMenuOpen(!menuOpen)}}className="text-white h-8 w-8"/>:<AiOutlineClose onClick={()=>{setMenuOpen(!menuOpen)}}className="text-white h-8 w-8"/>}
                 </div>
             </div>
         </div>
