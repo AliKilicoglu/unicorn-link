@@ -1,0 +1,35 @@
+{
+  "name": "unicorn-link-v2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node ./server/server.js",
+    "start": "NODE_ENV=production && node ./server/server.js",
+    "build": "prisma generate --schema=./prisma/schema.prisma && next build",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.15.2",
+    "axios": "^0.27.2",
+    "check-url": "^1.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "link-check": "^5.1.0",
+    "next": "12.1.6",
+    "pm2": "^5.2.0",
+    "randomstring": "^1.2.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.2.0",
+    "react-icons": "^4.4.0",
+    "react-simple-captcha": "^9.0.0",
+    "react-use": "^17.4.0"
+  },
+  "devDependencies": {
+    "eslint": "8.17.0",
+    "eslint-config-next": "12.1.6",
+    "jshint": "^2.13.4",
+    "prisma": "^3.15.2",
+    "tailwindcss": "^3.1.3"
+  }
+}
