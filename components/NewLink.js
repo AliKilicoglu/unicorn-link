@@ -2,6 +2,7 @@ const axios = require('axios')
 import { useState } from 'react'
 import { Toaster,toast } from 'react-hot-toast'
 import { useCopyToClipboard } from 'react-use'
+import Cookies from 'js-cookie'
 const NewLink = () => {
   const [longUrl,setLongUrl] = useState('')
   const [state, copyToClipboard] = useCopyToClipboard()
@@ -22,6 +23,9 @@ const NewLink = () => {
                 .then(function (response) {
                   console.log(response);
                   copyToClipboard('https://unicorn-link.herokuapp.com/'+response.data.key)
+                  const keys = Cookies.get('keys')
+                  keys.push(response.data.key)
+                  Cookies.set('keys',keys)
                   toast.success("Link panoya kopyalandı")
                 })
                 .catch(function (error) {
