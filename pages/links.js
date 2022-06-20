@@ -13,7 +13,7 @@ const Links = () => {
   return (
     keys.map(urlKey => {
       return (
-        <Link url={urlKey.url} urlKey={urlKey.key}/>
+        <Link key={urlKey.id} url={urlKey.url} urlKey={urlKey.key}/>
       )
     })
     )
