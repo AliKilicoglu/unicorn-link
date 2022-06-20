@@ -8,7 +8,7 @@ const Link = () => {
     useEffect(()=>{
       if(!router.isReady) return;
         const { id } = router.query
-        axios.get(`https://unicorn-link-v2.herokuapp.com/api/shorten/?key=${id}`, {
+        axios.get(`https://unicorn-link.herokuapp.com/api/shorten/?key=${id}`, {
           })
           .then(function (response) {
             console.log(response.data.url)

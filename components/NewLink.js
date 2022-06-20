@@ -18,12 +18,12 @@ const NewLink = () => {
             <button onClick={()=>{
               try {
                 new URL(longUrl);
-                axios.post('https://unicorn-link-v2.herokuapp.com/api/shorten', {
+                axios.post('https://unicorn-link.herokuapp.com/api/shorten', {
                   url:longUrl,
                 })
                 .then(function (response) {
                   console.log(response);
-                  copyToClipboard('https://unicorn-link-v2.herokuapp.com/'+response.data.key)
+                  copyToClipboard('https://unicorn-link.herokuapp.com/'+response.data.key)
                   toast.success("Link panoya kopyalandı")
                 })
                 .catch(function (error) {
