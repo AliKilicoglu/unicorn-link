@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 const axios = require('axios');
 
 const Link = () => {
+    
     const router = useRouter()
     useEffect(()=>{
       if(!router.isReady) return;

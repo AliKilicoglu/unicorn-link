@@ -4,7 +4,6 @@ var cors = require('cors')
 const bodyParser = require('body-parser')
 var randomstring = require("randomstring");
 const { PrismaClient } = require('@prisma/client');
-const { GiConsoleController } = require('react-icons/gi');
 
 const prisma = new PrismaClient()
 const dev = process.env.NODE_ENV !== 'production'

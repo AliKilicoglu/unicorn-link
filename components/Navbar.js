@@ -1,6 +1,7 @@
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {AiOutlineClose} from 'react-icons/ai'
 import { useState } from 'react'
+import Link from 'next/link'
 import MobileMenu from './MobileMenu'
 const Navbar = () => {
   const [menuOpen,setMenuOpen] = useState(false)
@@ -12,11 +13,15 @@ const Navbar = () => {
                     <h1 className="text-white  text-2xl">Unicorn Link</h1>
                 </div> 
                 <div className="flex   text-white text-xl  align-middle">
-                    <a href="">Yeni</a>
+                    <Link href="/">
+                        <a>Yeni</a>
+                    </Link>
                 </div>
                 <div className="flex   text-white text-xl ml-3  align-middle">
-                    <a href="">Linklerim</a>
-                </div>
+                    <Link href="/links">
+                        <a href="">Linklerim</a>
+                    </Link>
+                </div>      
             </div>
         </div>
             <div className="mobile:show desktop:hidden ">

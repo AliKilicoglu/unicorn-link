@@ -9,6 +9,7 @@ datasource db {
 
 model Link {
   id  String @default(cuid()) @id
+  clickCount Int
   key String
   url String
 }

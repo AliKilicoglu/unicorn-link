@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import '../styles/tailwind.css'
+import { CookiesProvider } from 'react-cookie';
 
 function MyApp({ Component, pageProps }) {
   return (

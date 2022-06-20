@@ -1,11 +1,10 @@
-const axios = require('axios');
-import { useState } from 'react';
+const axios = require('axios')
+import { useState } from 'react'
 import { Toaster,toast } from 'react-hot-toast'
-import { useCopyToClipboard } from 'react-use';
-import { useEffect } from 'react'
+import { useCopyToClipboard } from 'react-use'
 const NewLink = () => {
   const [longUrl,setLongUrl] = useState('')
-  const [state, copyToClipboard] = useCopyToClipboard();
+  const [state, copyToClipboard] = useCopyToClipboard()
   return (
     <>
         <Toaster/>
