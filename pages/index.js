@@ -9,7 +9,6 @@ export default function Home() {
         <meta name="description" content="Best link shortener ever" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar/>
       <NewLink/>
     </div>
   )
